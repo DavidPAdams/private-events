@@ -9,3 +9,4 @@ and manage user sign ups as guests of the event. The point is to use the power o
 associations to keep track of users as hosts and as guests, events that have a host and invited 
 guests, and invitations for invited guests to events.
 
+This app won't be deployed.
