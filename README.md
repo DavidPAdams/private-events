@@ -1,24 +1,11 @@
-# README
+# Private Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is another in the series for the Rails module of [The Odin Project](https://www.theodinproject.com). The point of this project is to work with ActiveRecord associations.
 
-Things you may want to cover:
+## Objective
 
-* Ruby version
+Build a private app similar to [Eventbrite](http://www.eventbrite.com/) which allows the user to create events, 
+and manage user sign ups as guests of the event. The point is to use the power of ActiveRecord 
+associations to keep track of users as hosts and as guests, events that have a host and invited 
+guests, and invitations for invited guests to events.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
