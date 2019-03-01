@@ -12,6 +12,7 @@ class EventsController < ApplicationController
   end
 
   def create
+    @event = Event.build(event_params)
     # use build method and have the creator's id prepopulated
   end
 

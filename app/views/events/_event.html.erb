@@ -1,0 +1,5 @@
+<li>
+  <p><b><%= event.detail %></b></p>
+  <p><%= event.description %></p>
+  <p>Hosted by <%= User.find(event.creator_id).name %></p>
+</li>

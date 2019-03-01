@@ -1,2 +1,8 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<h1>Event Info</h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <p><h3><%= @event.detail %></h3></p>
+    <p><h3><%= @event.description %></h3></p>
+    <p><h3>Hosed by: <%= User.find(@event.creator_id).name %></h3></p>
+  </div>
+</div>
