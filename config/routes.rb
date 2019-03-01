@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # need a root
+  root 'welcome#home'
   get  '/signup',  to: 'users#new'  
   get  '/login',   to: 'sessions#new'
   post '/login',   to: 'sessions#create'
