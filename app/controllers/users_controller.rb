@@ -17,7 +17,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @my_events = Events.where("creator_id = ?" , params[:id])
+    @upcoming_events = current_user.upcoming_events
+    @prev_events = current_user.previous_events
   end
 
   private
