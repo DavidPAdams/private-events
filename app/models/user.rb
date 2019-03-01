@@ -14,6 +14,14 @@ class User < ApplicationRecord
   has_many :invitations, foreign_key: "attendee_id"
   has_many :attended_events, through: :invitations
 
+  def upcoming_events
+    self.attended_events.where("date >= ?", Time.zone.now)
+  end
+
+  def previous_events
+    self.attended_events.where("date < ?", Time.zone.now)
+  end
+
   private
 
     def downcase_email
