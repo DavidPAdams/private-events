@@ -13,7 +13,9 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.build(event_params)
-    # use build method and have the creator's id prepopulated
+    if @event.save
+      flash[:success] = 'A new event was created'
+      redirect_to #'???'
   end
 
   private
