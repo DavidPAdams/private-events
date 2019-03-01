@@ -10,6 +10,10 @@ class User < ApplicationRecord
   #                   format: { with: VALID_EMAIL_REGEX },
   #                   uniqueness: { case_sensitive: false }
   
+  has_many :created_events, foreign_key: "creator_id", class_name: "Event"
+  has_many :invitations, foreign_key: "attendee_id"
+  has_many :attended_events, through: :invitations
+
   private
 
     def downcase_email
