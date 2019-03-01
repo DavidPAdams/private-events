@@ -3,7 +3,7 @@
   <div class="col-md-8 col-md-offset-2">
     <p><h3><%= @user.name %></h3></p>
     <p><h3><%= @user.email %></h3></p>
-    <h2>My hosted events</h2>
+    <h2>My hosted events:</h2>
     <table>
       <% if @my_events.any? %>
         <% @my_events.each do |event| %>
@@ -11,5 +11,21 @@
         <% end %>
       <% end %>
     </table>
+    <h2>Upcomming Events:</h2>
+    <table>
+      <% if @upcoming_events.any? %>
+        <% @upcoming_events.each do |coming_event| %>
+          <%= render 'event', event: coming_event %>
+        <% end %>
+      <% end %>
+    </table>
+    <h2>Past Events:</h2>
+    <table>
+      <% if @prev_events.any? %>
+        <% @prev_events.each do |past_event| %>
+          <%= render 'event', event: past_event %>
+        <% end %>
+      <% end %>
+    </table>      
   </div>
 </div>
