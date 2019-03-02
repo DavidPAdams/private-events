@@ -2,9 +2,9 @@
 
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-    
-    <ul>
-      <%= render @events %>
-    </ul>
+    <p>Upcoming events:</p>
+    <ul><%= render @events.upcoming %></ul>
+    <p>Past events:</p>
+    <ul><%= render @events.past %></ul>
   </div>
 </div>
