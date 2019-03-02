@@ -4,5 +4,5 @@ class Event < ApplicationRecord
   has_many :invitations, foreign_key: "attended_event_id"
 
   scope :upcoming, -> { where("date >= ?", Time.zone.now).order("date ASC") }
-  scope :past, -> { where("dae < ?", Time.zone.now).order("date DESC") }
+  scope :past, -> { where("date < ?", Time.zone.now).order("date DESC") }
 end

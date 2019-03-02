@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_action :logged_in_user, only: [:new, :create]
+
   def index
     @events = Event.all
   end
@@ -18,6 +20,7 @@ class EventsController < ApplicationController
       redirect_to events_path
     else
       render :new
+    end
   end
 
   private
